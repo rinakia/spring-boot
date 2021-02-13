@@ -1,0 +1,10 @@
+
+CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, name VARCHAR, password VARCHAR, lastlogindate TIMESTAMP, createdate DATE);
+
+INSERT INTO users(id, name, password, lastlogindate, createdate) VALUES ('1001', 'user01', 'pass01', current_timestamp, current_date);
+INSERT INTO users(id, name, password, lastlogindate, createdate) VALUES ('1002', 'user02', 'pass02', '2021-02-02 12:00:00', '2021-02-01');
+INSERT INTO users(id, name, password, lastlogindate, createdate) VALUES ('1003', 'user03', 'pass03', '2021-02-02 12:00:00', '2021-02-01');
+INSERT INTO users(id, name, password, lastlogindate, createdate) VALUES ('1004', 'user04', 'pass04', '2021-02-02 12:00:00', '2021-02-01');
+INSERT INTO users(id, name, password, lastlogindate, createdate) VALUES ('1005', 'user05', 'pass05', '2021-02-02 12:00:00', '2021-02-01');
+
+

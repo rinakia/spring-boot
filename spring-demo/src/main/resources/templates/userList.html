@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>User</title>
+</head>
+<body>
+    <h1>List</h1>
+
+ <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>PASSWORD</th>
+        <th>LAST LOGIN DATE</th>
+        <th>CREATE DATE</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user : ${user}" th:object="${user}">
+            <td class="center" th:text="*{id}"></td>
+            <td class="center" th:text="*{name}"></td>
+            <td class="center" th:text="*{password}"></td>
+            <td class="center" th:text="${#dates.format(user.lastlogindate, 'yyyy/MM/dd hh:mm')}"></td>
+            <td class="center" th:text="${#dates.format(user.createdate, 'yyyy/MM/dd')}"></td>
+             </tr>
+      </tbody>
+  </table>
+<body>
+</html>
